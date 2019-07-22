@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heading_1">28sp</dimen>
+    <dimen name="subtitle_1">12sp</dimen>
+    <dimen name="heading_2">20sp</dimen>
+    <dimen name="heading_3">14sp</dimen>
+    <dimen name="subtitle_2">10sp</dimen>
+    <dimen name="paragraf">12dp</dimen>
+    <dimen name="image_item_width">100dp</dimen>
+    <dimen name="image_item_height">80dp</dimen>
+    <dimen name="ph_item_title_height">10dp</dimen>
+    <dimen name="ph_item_title_width">100dp</dimen>
+    <dimen name="ph_item_title_width_2">140dp</dimen>
+    <dimen name="image_profile_dim">50dp</dimen>
+</resources>

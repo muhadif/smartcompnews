@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/ph_iv_item_news"
+        android:layout_width="@dimen/image_item_width"
+        android:layout_height="@dimen/image_item_height"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ph_tv_item__news_title"
+        android:layout_width="@dimen/ph_item_title_width_2"
+        android:layout_height="@dimen/ph_item_title_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintStart_toEndOf="@+id/ph_iv_item_news"
+        app:layout_constraintTop_toBottomOf="@+id/ph_tv_item__news_title2" />
+
+    <View
+        android:id="@+id/ph_tv_item__news_title2"
+        android:layout_width="@dimen/ph_item_title_width"
+        android:layout_height="@dimen/ph_item_title_height"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintStart_toEndOf="@+id/ph_iv_item_news"
+        app:layout_constraintTop_toTopOf="@+id/ph_iv_item_news" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

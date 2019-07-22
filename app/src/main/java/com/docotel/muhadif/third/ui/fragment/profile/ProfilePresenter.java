@@ -1,6 +1,7 @@
 package com.docotel.muhadif.third.ui.fragment.profile;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 
 import com.docotel.muhadif.smartcompnews.data.model.request.LogoutRequest;
@@ -54,7 +55,7 @@ public class ProfilePresenter implements BaseFragmentPresenter, GetCallbackInter
     }
 
     public void logout(String email) {
-
+        Log.d("EMAIL", email);
         LogoutRequest logoutRequest = new LogoutRequest(email, 1, ApplicationHelper.getUID());
         String data = new Gson().toJson(logoutRequest);
         String encryptedData = FTAes.encrypt(data, JNIHelper.getEncryption());
@@ -78,6 +79,7 @@ public class ProfilePresenter implements BaseFragmentPresenter, GetCallbackInter
     }
 
     public void onGetDataSucess(int requestId, String rawData) {
+        preferenceHelper.putString(PreferenceHelper.LOGGED_ACCOUNT, null);
         preferenceHelper.putBoolean(PreferenceHelper.LOGIN_STATE, false);
         mView.checkLogin();
     }

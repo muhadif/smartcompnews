@@ -208,7 +208,10 @@ public class ArticleFragment extends Fragment implements ArticleView {
 
     @Override
     public void failureTask(String message) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        Snackbar snackbar = Snackbar
+                .make(view, message, Snackbar.LENGTH_SHORT);
+
+        snackbar.show();
     }
 
     @Override

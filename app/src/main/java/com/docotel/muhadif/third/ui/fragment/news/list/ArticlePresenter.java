@@ -131,19 +131,21 @@ public class ArticlePresenter implements BaseFragmentPresenter, GetCallbackInter
     public void onGetDataSucess(int requestId, String data) {
         if (requestId == ARTICLE_CODE) {
             ArticleResponse articleResponse = new Gson().fromJson(data, ArticleResponse.class);
-            newsList.addAll(articleResponse.getList().getNews());
+            if(articleResponse != null) {
+                addToList(articleResponse.getList().getNews());
+            }
         } else if (requestId == NEWS_CODE) {
             NewsResponse newsResponse = new Gson().fromJson(data, NewsResponse.class);
-            newsList.addAll(newsResponse.getList().getNews());
+            if(newsResponse != null) {
+                addToList(newsResponse.getList().getNews());
+            }
         } else if (requestId == NEWEST_CODE) {
             AllResponse allResponse = new Gson().fromJson(data, AllResponse.class);
-            newsList.addAll(allResponse.getList().getNews());
+            if(allResponse != null) {
+                addToList(allResponse.getList().getNews());
+            }
         }
-
-        mView.showData(newsList);
         mView.finishedTask();
-
-
     }
 
     public void onGetDataFailure(String message) {
@@ -151,6 +153,14 @@ public class ArticlePresenter implements BaseFragmentPresenter, GetCallbackInter
         mView.failureTask(message);
         mView.finishedTask();
 
+    }
+
+    private void addToList(List<News> newsList) {
+        if (newsList.size() > 0) {
+           this.newsList.addAll(newsList);
+           mView.showData(this.newsList);
+
+        }
     }
 
 

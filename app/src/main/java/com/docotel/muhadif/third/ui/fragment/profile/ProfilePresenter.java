@@ -66,6 +66,7 @@ public class ProfilePresenter implements BaseFragmentPresenter, GetCallbackInter
                 JNIHelper.getEncryption(),
                 JNIHelper.getApi(),
                 context,
+                JNIHelper.getCertificate(),
                 new GetCallbackLogout(this));
 
     }

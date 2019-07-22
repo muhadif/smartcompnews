@@ -77,6 +77,7 @@ public class DetailPresenter implements BasePresenter, GetCallbackInterface {
                 JNIHelper.getEncryption(),
                 JNIHelper.getApi(),
                 context,
+                JNIHelper.getCertificate(),
                 new GetCallbackDetailNews(this));
 
     }

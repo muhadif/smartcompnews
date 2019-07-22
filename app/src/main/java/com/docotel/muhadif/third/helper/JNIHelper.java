@@ -1,5 +1,7 @@
 package com.docotel.muhadif.third.helper;
 
+import android.util.Log;
+
 public class JNIHelper {
     static {
         System.loadLibrary("native-lib");
@@ -14,6 +16,7 @@ public class JNIHelper {
     }
 
     public static String getCertificate(){
+        Log.d("CERT", getCertificateKey());
         return getCertificateKey();
     }
 

@@ -121,6 +121,7 @@ public class ArticlePresenter implements BaseFragmentPresenter, GetCallbackInter
                     JNIHelper.getEncryption(),
                     JNIHelper.getApi(),
                     context,
+                    JNIHelper.getCertificate(),
                     new GetCallbackNews(this));
         } else {
             mView.noInternet();

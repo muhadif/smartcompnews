@@ -72,6 +72,7 @@ public class LoginPresenter implements BasePresenter, GetCallbackInterface {
                 JNIHelper.getEncryption(),
                 JNIHelper.getApi(),
                 context,
+                JNIHelper.getCertificate(),
                 new GetCallbackLogin(this));
 
     }
